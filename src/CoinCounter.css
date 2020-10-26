@@ -1,0 +1,13 @@
+img {
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    height: 200px;
+    width: auto;
+
+}
+
+.score {
+    text-align: center;
+    margin-top: 20px;
+}
