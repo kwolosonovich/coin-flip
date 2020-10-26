@@ -8,6 +8,7 @@ const CoinCounter = () => {
     // set coin image state 
     const [isHeads, setIsHeads] = useState()
 
+
     // use random number to set heads to true or false
     const FlipCoin = () => {
         if (Random()) {
@@ -24,10 +25,14 @@ const CoinCounter = () => {
     }
     // display coin image 
     return (
-        <>
-            <div>{counter} {isHeads}</div>
-        </>
-    )
+      <>
+        <button onClick={FlipCoin}>Flip Coin</button>
+
+        <div>
+          {counter} {isHeads}
+        </div>
+      </>
+    );
 }
 
-export default CoinCounter
+export default CoinCounter; 
