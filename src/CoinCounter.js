@@ -5,6 +5,7 @@ import "./CoinCounter.css";
 
 // image source
 let srcJpg = "https://static.thenounproject.com/png/98997-200.png";
+let altText = "start";
 
 const CoinCounter = () => {
   // set counter state [heads, tails]
@@ -22,7 +23,7 @@ const CoinCounter = () => {
       setCounter([...counter]);
       srcJpg =
         "https://2.bp.blogspot.com/-leqw-ggDo2E/W3km7SLGpxI/AAAAAAAAAMY/kKtdRLsT5mkUK2DRc1bme852a6WGLGC7QCLcBGAs/s400/dime-heads.jpg";
-      console.log(srcJpg);
+      altText = "heads flipped";
     } else {
       // set tails image and increase tails counter
       setIsHeads(false);
@@ -30,6 +31,7 @@ const CoinCounter = () => {
       setCounter([...counter]);
       srcJpg =
         "https://1.bp.blogspot.com/-axMqjO2fmug/W3km7ydbocI/AAAAAAAAAMg/VFmL2acMhAYyIillBSmo_KPr4rFMrIkUQCLcBGAs/s400/dime-tails.jpg";
+      altText = "tails flipped";
     }
   };
 
@@ -37,7 +39,7 @@ const CoinCounter = () => {
   return (
     <>
       <button onClick={FlipCoin}>Flip Coin</button>
-      <img className="coin" src={srcJpg} alt="coin" />
+      <img className="coin" src={srcJpg} alt={altText} />
 
       <div className="score">
         You've flipped <b>{counter[0] + counter[1]}</b> times, with{" "}
