@@ -10,5 +10,5 @@ it("renders without crashing", function () {
 // snapshot test
 it("matches snapshot", () => {
   const {asFragment} = render(<App />)
-  expect(asFragment().toMatchSnapshot)
+  expect(asFragment()).toMatchSnapshot()
 })

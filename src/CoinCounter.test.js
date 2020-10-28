@@ -14,7 +14,7 @@ it("renders without crashing", () => {
 // snapshot test
 it("matches snapshot", () => {
   const { asFragment } = render(<CoinCounter />);
-  expect(asFragment().toMatchSnapshot);
+  expect(asFragment()).toMatchSnapshot()
 });
 
 beforeEach(function () {
@@ -48,9 +48,9 @@ describe("test tails flip", () => {
     let img = queryByAltText("tails flipped");
     expect(img).toBeInTheDocument();
   });
-});
+// });
 
-describe("test heads flip", () => {
+// describe("test heads flip", () => {
   test("test heads", function () {
     jest.spyOn(Math, "random").mockReturnValueOnce(0.75);
   });
